@@ -7,7 +7,6 @@ from kivy.graphics.texture import Texture
 from kivymd.font_definitions import theme_font_styles
 
 from detection import detection
-from process import extract_bpm
 
 import numpy as np
 
