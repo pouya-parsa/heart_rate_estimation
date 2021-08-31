@@ -4,7 +4,6 @@ from kivy.uix.image import Image
 from kivymd.uix.label import MDLabel
 from kivy.clock import Clock
 from kivy.graphics.texture import Texture
-
 from kivymd.font_definitions import theme_font_styles
 
 import cv2
@@ -14,9 +13,9 @@ import numpy as np
 from scipy import signal
 import matplotlib.pyplot as plt
 from sklearn.decomposition import FastICA
-import time
 
-import cv2
+import seaborn as sns
+sns.set()
 
 import time
 
@@ -190,8 +189,13 @@ class mainApp(MDApp):
         selected_freq = (times_ > 0.75) & (times_ < 3)
         times_ = times_[selected_freq]
         
-    #     plt.plot(times_, fft[selected_freq][:, 0])
-        
+        # plt.figure()
+        # plt.plot(times_, fft[selected_freq])
+        # plt.title("Power of Signal by Applying FFT")
+        # plt.xlabel("Frequency (Hz)")
+        # plt.ylabel("Power")
+        # plt.savefig("fig.png")
+
         bpm = len(signal.find_peaks(fft[selected_freq][:])[0]) / (self.times[-1] - self.times[0]) * 60
         
         self.bpms.append(bpm)
