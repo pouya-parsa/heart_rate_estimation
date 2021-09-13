@@ -1,5 +1,10 @@
 ## Heart Rate Measurment From Video
 
+to run interactive user interface first install requirements by <br/><br/>
+`pip install -r requirements.txt`<br/><br/>
+and the run GUI.py: <br/><br/>
+`python GUI.py`
+
 <img src="readme/demo.png" alt="demo" width=600 />
 This repo provides implementation for two papers on measuring heart rate from video :
 
